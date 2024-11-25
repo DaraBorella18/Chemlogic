@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChemLogic</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        height: 100%;
+        overflow: hidden;
+        background-color: #e9e9f1;
+      }
+      h1,
+      h2 {
+        font-family: "Montserrat", cursive;
+      }
+      .landing-content {
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        height: 100%;
+        color: black;
+        text-align: center;
+        min-height: 100vh;
+        justify-content: center;
+      }
+      .wave-content {
+        bottom: 0px;
+        width: 100%;
+        flex: 1;
+      }
+      .wave {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        fill: white;
+        z-index: 0;
+        top: 34.8vw;
+        transform: scale(0.7) rotate(-90deg);
+      }
+      .montserrat {
+        font-family: "Montserrat", cursive;
+        font-size: 2em;
+        margin: 0;
+      }
+      .header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.81);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        z-index: 10;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .header-logo {
+        text-decoration: none;
+        font-weight: 300;
+        color: black;
+      }
+      .header-logo > b {
+        font-weight: 500 !important;
+      }
+      .header img {
+        height: 50px;
+      }
+      .header .nav-buttons {
+        display: flex;
+      }
+      .text-button {
+        background: none;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 6px;
+      }
+      .text-button:hover {
+        background-color: #0000003a;
+      }
+      .filled-button {
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 6px;
+        font-weight: 400;
+      }
+      .filled-button:hover {
+        background-color: #dfdfdf8f;
+      }
+      .content {
+        background: rgba(256, 256, 256, 0.8);
+        padding: 20px;
+      }
+      .intro {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      .selling-points {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+      .selling-point {
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        padding: 15px;
+        border-radius: 10px;
+        width: 30%;
+      }
+      .diagram-box {
+            fill: #ffffff;
+            stroke: #000000;
+            stroke-width: 1;
+            cursor: pointer;
+        }
+
+        .diagram-box:hover {
+            fill: #e0e0e0;
+        }
+        .diagram-box.selected {
+            fill: #e0e0e0;
+        }
+
+    .diagram-text {
+        
+        cursor: pointer;
+        font-family: "Montserrat", cursive;
+    }
+
+        #info {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        #info-header {
+            font-size: xx-large;
+            font-family: 'Montserrat';
+            margin-bottom: 58px;
+            font-weight: 400;
+        }
+        #info-content {
+            width: 74%;
+            margin: 0 auto;
+        }
+
+        #info-content > p {
+            font-family: 'Roboto';
+            text-indent: 5%;
+            text-align: justify;
+            font-size: larger;
+            line-height: 48px;
+        }
+        .workflow {
+            width: 78%;
+            height: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <a a href="./index.html" class="header-logo montserrat" style="margin-left: 3em"><b>CHEM</b>LOGIC</a>
+        <!-- Substitua pelo link do logo desejado -->
+        <div class="nav-buttons">
+          <button
+            class="text-button"
+            onclick="window.location.href='./tratamento-agua.html'"
+          >
+            Tratamento de Água
+          </button>
+
+          <button
+            class="filled-button"
+            onclick="window.location.href='#simulacao'"
+          >
+            Simulação
+          </button>
+        </div>
+      </header>
+      <div class="landing-content">
+        <div class="wave-content" style="margin-top: 33px;padding-top: 90px;">
+            
+            <h1 style="font-size: xx-large;font-weight: 500;">Processo Simplificado</h1>
+        <svg viewbox="0 0 650 650" class="workflow">
+            <defs>
+                <marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5"
+                    orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,7 L7,3.5 z" fill="#000" />
+                </marker>
+            </defs>
+
+            <rect class="diagram-box" x="50" y="50" width="150" height="60" data-info="Captação" />
+            <text class="diagram-text" x="90" y="85">Captação</text>
+
+            <rect class="diagram-box" x="255" y="50" width="150" height="60" data-info="Coagulação" />
+            <text class="diagram-text" x="285" y="85">Coagulação</text>
+            <line x1="200" y1="80" x2="250" y2="80" stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+
+            <rect class="diagram-box" x="450" y="50" width="150" height="60" data-info="Floculação" />
+            <text class="diagram-text" x="485" y="85">Floculação</text>
+            <line x1="405" y1="80" x2="445" y2="80" stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+
+            <rect class="diagram-box" x="450" y="150" width="150" height="60" data-info="Decantação" />
+            <text class="diagram-text" x="475" y="185">Decantação</text>
+            <line x1="525" y1="110" x2="525" y2="145" stroke="black" stroke-width="1" marker-end="url(#arrow)" /> -->
+
+            <rect class="diagram-box" x="450" y="250" width="150" height="60" data-info="Filtração" />
+            <text class="diagram-text" x="490" y="285">Filtração</text>
+            <line x1="525" y1="210" x2="525" y2="245" stroke="black" stroke-width="1" marker-end="url(#arrow)" /> -->
+
+            <rect class="diagram-box" x="50" y="250" width="150" height="60" data-info="Sistema de distribuição" />
+            <text class="diagram-text" x="75" y="285">Distribuição</text>
+            <line x1="450" y1="280" x2="410" y2="280" stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+
+            <rect class="diagram-box" x="255" y="250" width="150" height="60" data-info="Desinfecção" />
+            <text class="diagram-text" x="280" y="285">Desinfecção</text>
+            <line x1="255" y1="280" x2="205" y2="280" stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+        </svg>
+    </div>
+        <div class="wave-content" style="    margin-left: -48px;">
+            <svg class="wave">
+                <path
+                  d="M0.5 119L34.5 96.5L160.5 57.5154C318.689 29.3378 313.516 134.624 423 102C532.484 68.7644 609.516 -10.9436 719 29.3378C828.484 70.232 881.016 96.1117 990.5 112.5C1099.98 128.276 1213.56 11.2213 1310.5 0.5C1419.41 0.5 1485.95 88.9137 1920 57.5154V284.5H1577.76C1523.02 284.5 1413.53 284.5 1304.05 284.5C1194.56 284.5 1093.48 284.5 984 284.5C874.516 284.5 756.626 284.5 647.141 284.5C537.657 284.5 428.173 284.5 318.689 284.5C209.204 284.5 99.7201 284.5 44.978 284.5H0.5V119Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+              </svg>
+              <svg class="wave">
+                <path
+                  d="M0 108.798L90 73.5C182 28.5 286.016 125.904 395.5 90.9997C504.984 55.4402 618.516 -14.5975 728 28.5C837.484 72.253 858.197 91.2644 967.681 108.798C1077.17 125.677 1133.05 11.6237 1229.99 0.152832C1338.9 0.152832 1485.45 131.74 1920 98.1469V341H1577.26C1522.52 341 1413.03 341 1303.55 341C1194.06 341 1084.58 341 975.094 341C865.61 341 756.126 341 646.641 341C537.157 341 427.673 341 318.189 341C208.704 341 99.2201 341 44.478 341H0V108.798Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+              </svg>
+              <svg class="wave">
+                <path
+                  d="M0 80.5956L96 46.5C166.709 31.9547 279.413 109.55 388.897 80.5956C498.382 51.0974 614.138 -26.2512 723.623 9.50017C833.107 45.7953 858.197 85.0816 967.681 99.6268C1077.17 113.628 1133.05 19.016 1229.99 9.5004C1338.9 9.5004 1485.45 118.658 1920 90.7909V292.249H1577.26C1522.52 292.249 1413.03 292.249 1303.55 292.249C1194.06 292.249 1084.58 292.249 975.094 292.249C865.61 292.249 756.126 292.249 646.641 292.249C537.157 292.249 427.673 292.249 318.189 292.249C208.704 292.249 99.2201 292.249 44.478 292.249H0V80.5956Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+              </svg>
+          <div
+            style="    background-color: rgb(255 255 255 / 81%);
+            margin-left: 52px;
+            width: 100%;
+            height: 100%;
+            padding: 124px 22px;
+            max-width: 90%;
+            "
+          >
+            <h1 id="info-header"> Texto padrão</h1>
+            <div id="info-content">Lorem ipsum genérico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const contextInfo = {
+            "Captação": "<p>A captação é a primeira etapa do processo de tratamento de água, onde a água é coletada diretamente de <b>fontes naturais</b>, como rios, lagos ou represas. Esta água, ainda não tratada, contém diversas <b>impurezas</b> que precisam ser removidas para que ela se torne potável. A qualidade da água captada pode <b>variar</b> de acordo com a fonte, exigindo diferentes intensidades de tratamento nas etapas subsequentes.</p>",
+            "Coagulação": "<p>Na coagulação, que é a segunda etapa do processo, um <b>coagulante</b> é adicionado à água. Este coagulante, que pode ser composto por sais de alumínio ou ferro, tem a função de <b>neutralizar as cargas</b> elétricas das partículas suspensas na água. Essas partículas, que antes estavam dispersas e eram <b>difíceis de remover</b>, começam a se aglomerar em pequenos <b>flocos</b>. Este processo ocorre rapidamente, em menos de um segundo, devido à reação do coagulante com a alcalinidade da água. Para garantir que o coagulante seja bem distribuído, a água passa por <b>misturadores rápidos</b>, que ajudam a <b>dispersar</b> o coagulante de maneira uniforme.</p>",
+            "Floculação": "<p>Seguindo para a floculação, os pequenos flocos formados na coagulação se <b>aglutinam</b> em flocos maiores e mais densos. Nesta etapa, a água é <b>agitada lentamente</b> em tanques específicos, evitando que os flocos se quebrem. O uso de <b>polieletrólitos</b>, que são polímeros com grupos iônicos, pode ser necessário para <b>acelerar</b> o processo de formação dos flocos e aumentar sua resistência. A velocidade do fluxo da água dentro dos tanques de floculação deve ser <b>controlada</b>, permanecendo entre 10 a 30 centímetros por segundo, para assegurar que os flocos <b>não sedimentem</b> prematuramente ou se desfaçam.</p>",
+            "Decantação": "<p>Após a floculação, a água passa pelo processo de decantação. Nesta etapa, os flocos formados, que agora são maiores e mais pesados que a água, <b>sedimentam no fundo do tanque</b> de decantação devido à ação da <b>gravidade</b>. Esse processo permite a separação das impurezas da água, resultando em uma água mais clara. Os decantadores podem ser de <b>baixa taxa</b>, conhecidos como convencionais, ou de <b>alta taxa</b>, que utilizam elementos como tubos ou placas para <b>acelerar a sedimentação</b> dos flocos. A decantação é crucial para preparar a água para a próxima etapa de tratamento.</p>",
+            "Filtração": "<p>Na filtração, a água que passou pela decantação é filtrada através de um <b>meio poroso</b>, geralmente composto por camadas de areia e seixos. A filtração é responsável por remover as <b>partículas remanescentes</b> que não foram eliminadas nas etapas anteriores. Dependendo da granulometria da areia, a filtração pode ser classificada como <b>rápida ou lenta</b>. A filtração rápida opera com taxas mais altas, entre 180 a 360 metros cúbicos por metro quadrado ao dia, enquanto a filtração lenta opera com taxas menores, entre 3 a 9 metros cúbicos por metro quadrado ao dia. Este processo é eficaz na remoção de pelo menos <b>90% das partículas</b> em suspensão que não se decantaram previamente.</p>",
+            "Desinfecção": "<p>Por fim, a água passa pela etapa de desinfecção, que é fundamental para eliminar <b>microrganismos patogênicos</b>, como bactérias, vírus, protozoários e vermes. A desinfecção mais comum é feita por meio da <b>cloração</b>, onde o cloro é adicionado à água devido à sua alta eficácia na destruição de organismos nocivos. Além de sua função principal de desinfetar, o cloro também auxilia na <b>eliminação de odores</b>, controle de algas e coagulação de matéria orgânica, além de remover substâncias como sulfeto de hidrogênio, ferro e manganês. Contudo, o uso de cloro precisa ser <b>rigorosamente monitorado</b> para evitar a formação de subprodutos prejudiciais. Adicionalmente, <b>ajustes de pH</b> e <b>fluoretação</b> são realizados antes de a água ser enviada ao sistema de distribuição, garantindo sua <b>potabilidade e segurança</b> para consumo.</p>",
+            "Sistema de distribuição": "<p>A etapa final é a inserção da água no sistema de distribuição, onde ela é conduzida para os <b>pontos de consumo</b>. A água, agora devidamente tratada e desinfetada, está pronta para ser entregue à população. Durante essa etapa, é crucial que a água seja mantida em <b>condições seguras</b> para evitar qualquer recontaminação e garantir que os padrões de potabilidade sejam mantidos até que a água chegue ao <b>consumidor final</b>."
+        }
+
+        const boxes = document.querySelectorAll('.diagram-box');
+        const infoHeader = document.getElementById('info-header');
+        const infoContent = document.getElementById('info-content');
+
+        // Set 'Captação' as the default value
+        const defaultInfoText = 'Captação';
+        const defaultInfoContext = contextInfo[defaultInfoText];
+
+        infoHeader.textContent = `${defaultInfoText}`;
+        infoContent.innerHTML = defaultInfoContext;
+
+        // Add 'selected' class to the default box
+        const defaultBox = document.querySelector(`[data-info="${defaultInfoText}"]`);
+        defaultBox.classList.add('selected');
+
+        boxes.forEach(box => {
+            box.addEventListener('mouseover', function() {
+                const infoText = this.getAttribute('data-info');
+                const infoContext = contextInfo[infoText];
+
+                infoHeader.textContent = `${infoText}`;
+                infoContent.innerHTML = infoContext;
+
+                // Add 'selected' class to the current box
+                this.classList.add('selected');
+
+                // Remove 'selected' class from the other boxes
+                boxes.forEach(otherBox => { 
+                    if (otherBox !== this) {
+                        otherBox.classList.remove('selected');
+                    }
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
